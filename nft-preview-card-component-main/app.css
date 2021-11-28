@@ -13,21 +13,25 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 1em;
   box-shadow: 5px 5px 15px 5px hsl(217, 54%, 11%);
   border-radius: 0.7em;
+  width: 35vh;
 }
 
 .img {
   align-self: center;
-  width: 30vh;
+  width: 35vh;
   border-radius: 5%;
-  padding: 5px;
+  margin-bottom: 0.5em;
 }
 .name {
   color: white;
+  font-weight: 600;
+  font-size: 18px;
 }
 .user {
-  font-weight: 100;
+  font-weight: 300;
   font-size: small;
 }
 .link-user {
@@ -36,6 +40,10 @@ body {
 }
 .ammount {
   color: hsl(178, 100%, 50%);
+}
+.description {
+  margin-bottom: 0;
+  font-weight: 400;
 }
 
 .light-blue {
@@ -47,7 +55,21 @@ body {
   border-bottom: 1px solid hsl(215, 32%, 27%);
 }
 .avatar {
-  width: 1.7em;
+  width: 1.6em;
+  height: 1.6em;
   border: 1.4px solid white;
   border-radius: 50%;
+  margin: 1em 1em 0 0;
+}
+.user {
+  margin: 1.6em 0 0 0;
+}
+.user_name_img {
+  display: inline-flex;
+}
+
+@media (min-width: 375px) {
+  .avatar {
+    border: none;
+  }
 }
