@@ -19,13 +19,6 @@ body {
   width: 35vh;
 }
 
-.img {
-  align-self: center;
-  width: 35vh;
-  border-radius: 5%;
-  margin-bottom: 0.5em;
-  background: none;
-}
 .name {
   color: white;
   font-weight: 600;
@@ -84,6 +77,34 @@ body {
     border: none;
   }
 }
+
+.img {
+  align-self: center;
+  width: 35vh;
+  border-radius: 5%;
+  margin-bottom: 0.5em;
+  max-width: 100%;
+  display: block;
+  position: relative;
+  background-color: hsl(178, 100%, 50%);
+}
+.img:before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(/nft-preview-card-component-main/images/icon-view.svg);
+  background-repeat: no-repeat;
+  background-size: 5rem;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+.link:hover .img:before {
+  opacity: 1;
+}
 .name:hover {
   color: hsl(178, 100%, 50%);
   cursor: pointer;
@@ -93,5 +114,6 @@ body {
 }
 .img:hover {
   background-color: hsl(178, 100%, 50%);
-  opacity: 0.2;
+
+  cursor: pointer;
 }
